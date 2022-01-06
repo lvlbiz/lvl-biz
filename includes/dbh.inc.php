@@ -1,6 +1,6 @@
 <?php
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'lvlbiz');
+define('DB_USERNAME', 'u317500774_lvlbiz');
 define('DB_PASSWORD', '=g*+:Zvq4N>f');
 define('DB_NAME', 'u317500774_lvlbiz');
  
