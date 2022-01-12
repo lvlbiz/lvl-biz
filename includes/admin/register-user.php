@@ -1,7 +1,7 @@
 <?php
 
 //require_once "config.php";
-require_once 'dbh.inc.php'; 
+require_once './includes/dbh.inc.php'; 
 
 $username = $password = $usertype = "";
 $username_err = $password_err = $usertype_err = "";
