@@ -10,9 +10,9 @@ require "includes/admin/register-user.php";
 ?>
 <!DOCTYPE html>
 <html>
-	<?php include('./includes/admin/header.php');?>
+	<?php include('includes/admin/header.php');?>
 	<body class="loggedin">
-		<?php include('./includes/admin/nav-bar.php');?>
+		<?php include('includes/admin/nav-bar.php');?>
 		<div class="content">
             <div class="row">
 	            <div class="wrapper">
