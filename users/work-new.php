@@ -42,14 +42,14 @@ if (!isset($_SESSION['loggedin'])) {
             <div class= "div-section">
                 <h2>SAMPLE</h2>
                 
-                    <?php //if ($_SESSION['usertype'] == 3) { ?>
+                    <?php if ($_SESSION['usertype'] == 3) { ?>
                            <iframe class="iframe"  src="salesman/form/index.php"></iframe>
                     <?php 
-                        // } else { 
-                        //     include ('web-developer/sample-page-worker.php');
-                        // }
+                        } else { 
+                            include ('web-developer/sample-page-worker.php');
+                        }
                     ?>
-                    <iframe class="iframe"  src="../form/index.php"></iframe>
+                    
             </div>
         </section>
   </body>      
