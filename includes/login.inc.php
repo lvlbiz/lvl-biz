@@ -7,8 +7,8 @@ $username_err = $password_err = $login_err = "";
 function checkRole($role) {
     $usertype = array(
         1 => 'Location: ../home.php', // admin
-        2 =>  'Location: ../home2.php', // web developer
-        3 =>  'Location: ../home3.php', // salesman
+        2 =>  'Location: ../home-users.php', // web developer
+        3 =>  'Location: ../home-users.php', // salesman
     );
     return $usertype[$role];
 }
@@ -46,7 +46,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
+                            $_SESSION["username"] = $username;
+                            $_SESSION["usertype"] = $usertype;                            
                             
                             header(checkRole($usertype));
                         } else{

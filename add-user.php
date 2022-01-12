@@ -5,14 +5,14 @@ if (!isset($_SESSION['loggedin'])) {
 	exit;
 }
 
-require "includes/register-user.php";
+require "includes/admin/register-user.php";
 
 ?>
 <!DOCTYPE html>
 <html>
-	<?php include('./includes/header.php');?>
+	<?php include('./includes/admin/header.php');?>
 	<body class="loggedin">
-		<?php include('./includes/nav-bar.php');?>
+		<?php include('./includes/admin/nav-bar.php');?>
 		<div class="content">
             <div class="row">
 	            <div class="wrapper">

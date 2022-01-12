@@ -7,9 +7,9 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 <!DOCTYPE html>
 <html>
-	<?php include('./includes/header.php');?>
+	<?php include('./includes/admin/header.php');?>
 	<body class="loggedin">
-		<?php include('./includes/nav-bar.php');?>
+		<?php include('./includes/admin/nav-bar.php');?>
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Welcome back, <?=$_SESSION['username']?>!</p>
@@ -23,17 +23,18 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>';       
                 } 
             ?>
-			<div>
-				<table id="my-example">
-    				<thead>
-      					<tr>
-      					    <th>Id</th>
-      					    <th>Username</th>
-      					    <th>Usertype</th>
-      					</tr>
-    				</thead>
-  				</table>
-			</div> 
+			
+			<div class="container">
+				<table id="contact-detail" class="display nowrap" cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Usertype</th>
+							<th>Date Created</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>
@@ -41,26 +42,15 @@ if (!isset($_SESSION['loggedin'])) {
 
 <script type="text/javascript">
   $(document).ready(function() {
-      $('#my-example').dataTable({
-        /* "bProcessing": true, */
-        "ajax": "./includes/users-datatables.php",
-        "columns": [
-              { mData: 'id' } ,
-              { mData: 'username' },
-              { mData: 'usertype' }
-            ]
-      });  
+	$.fn.dataTable.ext.errMode = 'throw';
+	$('#contact-detail').dataTable({
+		"scrollX": true,
+		"pagingType": "numbers",
+        "processing": true,
+        "serverSide": true,
+        "ajax": "includes/users-datatables.php",
+    } );
+	
   });
 
-// $(document).ready(function() {
-//     $('#books').DataTable({
-//         "ajax": "get_books.php",
-//         "columns": [
-//            { "data": "author" },
-//            { "data": "title" },
-//            { "data": "genre" },          
-//            { "data": "location" }         
-//         ]
-//     });
-// });
 </script>

@@ -1,23 +1,24 @@
 <?php
-
 require 'dbh.inc.php';
-
-$sql = "SELECT * FROM `accounts`";
-$result = $mysqli->query($sql);
-
-print_r($result);
-while($row = $result->fetch_array(MYSQLI_ASSOC)){
-  $data[] = $row;
-}
-
-
-$results = ["sEcho" => 1,
-        	"iTotalRecords" => count($data),
-        	"iTotalDisplayRecords" => count($data),
-        	"aaData" => $data ];
-
-
-echo json_encode($results);
-
+$table = 'accounts';
  
+$primaryKey = 'id';
+ 
+$columns = array(
+    array( 'db' => 'username', 'dt' => 0 ),
+    array( 'db' => 'usertype',  'dt' => 1 ),
+    array( 'db' => 'created_at',   'dt' => 2 ),
+);
+ 
+$sql_details = array(
+    'user' => DB_USERNAME,
+    'pass' => DB_PASSWORD,
+    'db'   => DB_NAME,
+    'host' => DB_SERVER
+);
+ 
+require( 'datatables/ssp.class.php' );
+echo json_encode(
+    SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
+);
 ?>
