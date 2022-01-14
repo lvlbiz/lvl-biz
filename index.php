@@ -31,7 +31,7 @@ require_once "includes/login.inc.php";
     <div class="container h-100">
         <div class="row h-100 justify-content-center align-items-center">
         <div class="wrapper">
-            <h2>Login</h2>
+            <h2>Login Test</h2>
             <?php 
             if(!empty($login_err)){
                 echo '<div class="alert alert-danger">' . $login_err . '</div>';
