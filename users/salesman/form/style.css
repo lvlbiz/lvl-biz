@@ -1,5 +1,5 @@
 /*custom font*/
-@import url(import url here);
+/* @import url(import url here); */
 
 body {
 	/*font: normal 1em 'font';*/
@@ -39,7 +39,9 @@ main {
   width: 100%;
   min-width: 600px;
 }
-
+h4{
+    float: right;
+}
 h1 {
   text-align: center;  
 }
@@ -48,10 +50,10 @@ input{
   width: 100%;
   font-size: 17px;
   font-family: Raleway;
-  border: 1px solid #aaaaaa;
+  
 }
 
-input[type=radio]{
+input[type=checkbox]{
   border: 3px solid #555;
   width: 20px;
 }
