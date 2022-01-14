@@ -11,7 +11,7 @@ if (!isset($_SESSION['loggedin'])) {
   <head>
     <meta charset="UTF-8">
     <title>Untitled Document</title>
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/lvl-biz/css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e36f36e146.js" crossorigin="anonymous"></script>

@@ -6,9 +6,9 @@ $username_err = $password_err = $login_err = "";
 
 function checkRole($role) {
     $usertype = array(
-        1 => 'Location: ../home.php', // admin
-        2 =>  'Location: ../home-users.php', // web developer
-        3 =>  'Location: ../home-users.php', // salesman
+        1 => 'Location: ../lvl-biz/home.php', // admin
+        2 =>  'Location: ../lvl-biz//home-users.php', // web developer
+        3 =>  'Location: ../lvl-biz//home-users.php', // salesman
     );
     return $usertype[$role];
 }
