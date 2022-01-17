@@ -16,3 +16,23 @@ CREATE TABLE IF NOT EXISTS `accounts` (
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `alts_salesman_questions` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `set_type` TINYINT(4),
+    `questions` varchar(50) NOT NULL,
+    `sort` TINYINT(4) NOT NULL,
+    `created_by` VARCHAR(255),
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `alts_salesman_set_type` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `set_type` TINYINT(4),
+    `name` VARCHAR(255),
+    `sort` TINYINT(4) NOT NULL,
+    `created_by` VARCHAR(255),
+    `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

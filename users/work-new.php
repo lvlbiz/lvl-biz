@@ -40,10 +40,15 @@ if (!isset($_SESSION['loggedin'])) {
         </header>
         <section class="section">
             <div class= "div-section">
-                <h2>SAMPLE</h2>
-                
+                <div class ="salesman-options">
+                    <button type="button" class="btn btn-primary" data-id="1">Website</button>
+                    <button type="button" class="btn btn-secondary" data-id="2">Webshop</button>
+                    <button type="button" class="btn btn-success" data-id="3">SEO</button>
+                    <button type="button" class="btn btn-danger" data-id="4">Bugfixing</button>
+                    <button type="button" class="btn btn-warning" data-id="5">Program</button>
+                </div>
                     <?php if ($_SESSION['usertype'] == 3) { ?>
-                           <iframe class="iframe"  src="salesman/form/index.php"></iframe>
+                           <iframe class="iframe"  src="salesman/form/index.php" style="display:none"></iframe>
                     <?php 
                         } else { 
                             include ('web-developer/sample-page-worker.php');
@@ -53,6 +58,12 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
         </section>
   </body>      
- 
 </html> 
 
+<script>
+    $(document).ready(function(){
+        $('.salesman-options').on('click', '.btn', function(){
+            if ($(this).attr('data-id') == '1') $(this).parent('.salesman-options').siblings('.iframe').css('display', 'block');
+        });
+    });
+</script>
