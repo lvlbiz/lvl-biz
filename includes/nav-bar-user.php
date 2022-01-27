@@ -20,6 +20,8 @@
                           <li><a class="dropdown-item" id="work-new" href="users/work-new.php" >New</a></li>
                           <li><a class="dropdown-item" id="work-current" href="users/work-current.php">Current</a></li>
                           <li><a class="dropdown-item" id="work-previous" href="users/work-previous.php">Previous</a></li>
+                          <li><a class="dropdown-item" id="work-previous" href="users/work-society.php">Society</a></li>
+                          <li><a class="dropdown-item" id="work-previous" href="users/work-humanitarian.php">Humanitarian</a></li>
                       </ul>
                 </li>
 
