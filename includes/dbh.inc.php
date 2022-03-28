@@ -3,6 +3,11 @@ define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'u317500774_lvlbiz');
 define('DB_PASSWORD', '=g*+:Zvq4N>f');
 define('DB_NAME', 'u317500774_lvlbiz');
+
+// define('DB_SERVER', 'localhost');
+// define('DB_USERNAME', 'root');
+// define('DB_PASSWORD', '');
+// define('DB_NAME', 'u317500774_lvlbiz');
  
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  

@@ -1,3 +1,3 @@
 <div>
-    Sample page
+    
 </div>

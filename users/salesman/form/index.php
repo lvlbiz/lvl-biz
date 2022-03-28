@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Work Form</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'><link rel="stylesheet" href="./style.css">
-
+<style>
+  .bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+.bd-highlight {
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.15);
+    flex-direction: column;
+}
+.bd-hide {
+  display: none !important;
+}
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -30,7 +45,7 @@
             So if that is it, I would like thank You for Your time, and good bye (name).
       </div>
       <div class="modal-footer">
-<!--        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
         <button type="button" class="btn btn-primary">Close and Proceed</button>
       </div>
     </div>
@@ -84,17 +99,17 @@
         <p><input  type="text" class="field" placeholder="" oninput="this.className = ''" ></p>
 
          <label>Can You describe me the style of the website that you want?</label>
-        <p><input class="field" placeholder="" oninput="this.className = ''" ></p>
+        <p><input type="text" class="field" placeholder="" oninput="this.className = ''" ></p>
 </div>
 
     <div class="tab">
         <h4>Step 5</h4>
           <h3>Important</h3>
           <label>Can You name me 3 things that are most important on your new website?</label>
-        <p><input class="field" placeholder="" oninput="this.className = ''" ></p>
+        <p><input type="text" class="field" placeholder="" oninput="this.className = ''" ></p>
 
           <label>Can You name me 3 things that are least important on your new website?</label>
-        <p><input class="field" placeholder="" oninput="this.className = ''"></p>
+        <p><input type="text" class="field" placeholder="" oninput="this.className = ''"></p>
 
     </div>
 
@@ -102,20 +117,26 @@
         <h4>Step 6</h4>
          <h3>Pages</h3>
           <p>Which pages would You like to have?</p>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+            <input type="checkbox" name="home" value="home" oninput="this.className = ''">
                 <label>Home</label><br>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+
+            <input class="radio" type="checkbox"  name="landing" value="landing" oninput="this.className = ''">
                 <label>Landing Page</label><br>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+
+            <input class="radio" type="checkbox" name="service" value="products" oninput="this.className = ''">
                 <label>Services/Products</label><br>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+
+            <input class="radio" type="checkbox" name="about" value="about" oninput="this.className = ''">
                 <label>About Us</label><br>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+
+            <input class="radio" type="checkbox"  name="contact" value="contact"  oninput="this.className = ''">
                 <label>Contact</label><br>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+
+            <input class="radio" type="checkbox"  name="portfolio" value="portfolio"  oninput="this.className = ''">
                 <label>Portfolio</label><br>
+
             <label>Can you name me 3 things that are least important on your new website?</label>
-        <p><input placeholder="" oninput="this.className = ''"></p>
+            <p><input type="text" placeholder="" oninput="this.className = ''"></p>
 </div>
 
     <div class="tab">
@@ -158,9 +179,9 @@
     <div class="tab">
         <h4>Step 10</h4>
                 <h3>Information or Service</h3>
-          <input class="radio" type="checkbox"  oninput="this.className = ''">
+          <input class="radio" type="radio"  name='info-yes' value="YES" oninput="this.className = ''">
                 <label>Yes, Provide us with credentials and information</label><br>
-            <input class="radio" type="checkbox"  oninput="this.className = ''">
+            <input class="radio" type="radio"  name='info-no'  value="NO" oninput="this.className = ''">
                 <label>No, We will provide free domain and free hosting for one year</label><br>
 </div>
 
@@ -224,6 +245,13 @@
 	
 		</div>
 	</section>
+  <section>
+    <div class='bd-example'>
+      <div class="d-flex p-2 bd-highlight bd-content">
+
+      </div>
+    </div>
+  </section>
 
 </main> <!-- /content -->
 	

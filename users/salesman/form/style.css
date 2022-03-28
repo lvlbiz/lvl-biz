@@ -3,7 +3,7 @@
 
 body {
 	/*font: normal 1em 'font';*/
-	background-color: #ecfab6;
+	background-color: #c2fdb9;
  
 }
 html {
@@ -17,10 +17,6 @@ html::-webkit-scrollbar {
 }
 
 
-main {
-/*	margin-top: 4.5em; */
- 
-}
 #section1 {
 	height: 30em;
 }

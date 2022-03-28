@@ -1,8 +1,61 @@
+var inpTotal = 0;
 $('.btn').click(function(event) {
   event.preventDefault();
   var target = $(this).data('target');
-// console.log('#'+target);
+//  console.log('#'+target);
 $('#click-alert').html('data-target= ' + target).fadeIn(50).delay(3000).fadeOut(1000);
+});
+
+const showCurrentInputs = (type = 'text', text, name = null) => {
+  if (type == 'text') {
+    $('.bd-content').append('<p>'+text+'</p>');
+  } else if (type == 'checkbox') {
+    $('.bd-content').append('<p>'+name +' - '+text+'</p>');
+  }
+}
+
+$('#nextBtn').on('click', function() {
+ // $('.bd-content').css('display', 'block !important');
+//  if ($(elem).attr('type') == 'text') {
+//    
+//     
+//  } else if ($(elem).attr('type') == 'checkbox') {
+//     $('.tab').eq(currentTab-1).find('input').each(function(ind, el){
+//       if ($(el).is('checked')) inpTotal++;
+//     });
+//  }
+ 
+ //console.log('Current', currentTab-1, $('.tab').eq(currentTab-1).find('input').length, inpTotal);
+
+    var tabref = $('.tab').eq(currentTab-1).find('input').length;
+    inpTotal += tabref;
+    $('.bd-content').empty();
+
+    $('input').each(function(index, elem){
+      console.log(index, inpTotal);
+      var el = $(elem);
+      var type;
+      var val;
+      var name;
+
+      if (el.attr('type') == 'text') {
+          type = 'text';
+          val = el.val();
+          name = null;
+      } else if ( el.attr('type') == 'checkbox') {
+          type = 'checkbox';
+          val = el.is(':checked') ? 'YES' : 'NO';
+          name = el.next('label').text() ;
+      }
+
+      showCurrentInputs(type, val, name);
+
+      if ( index + 1 == inpTotal ) {
+        console.log(index+1 == inpTotal);
+        return false;
+      }
+
+    });
 });
 
 
